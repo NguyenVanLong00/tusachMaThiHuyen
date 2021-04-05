@@ -1,0 +1,31 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.ModelBinding;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+
+namespace TuSach
+{
+    public partial class Category : System.Web.UI.Page
+    {
+        protected void Page_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        public IQueryable<Models.Book> GetBooks([QueryString("id")] int? categoryId)
+        {
+            var _db = new TuSach.Models.BookContext();
+            IQueryable<Models.Book> query = _db.Books;
+
+            if (categoryId.HasValue && categoryId > 0)
+            {
+                query = query.Where(p => p.CategoryID == categoryId);
+                
+            }
+            return query;
+        }
+    }
+}

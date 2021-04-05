@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <title>Tu Sach</title>
+</head>
+
+<body class="p-0 m-0">
+    <header>
+        <div class="login container d-flex justify-content-end">
+            <a href="./login.html" class=" btn btn-sm btn-outline-primary m-1">Đăng Nhập</a>
+            <a href="./register.html" class=" btn btn-sm btn-outline-primary m-1">Đăng Ký</a>
+        </div>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light ">
+            <div class="container">
+                <a class="navbar-brand" href="./index.html">Tủ Sách</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              Thể Loại
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                              <li><a class="dropdown-item" href="./category.html?cat=new">Mới Cập Nhật         </a></li>
+                              <li><a class="dropdown-item" href="./category.html?cat=fiction">Giả Tưởng</a></li>
+                              <li><a class="dropdown-item" href="./category.html?cat=business">Kinh Doanh</a></li>
+                            </ul>
+                          </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="#" tabindex="-1">Đăng Truyện</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="container w-100">
+        <p class="display-5 mt-5">Đăng Tải Sách</p>
+
+        <div>
+            <input type="submit" class="btn btn-primary mb-3" value="tải lên"/>
+            <div class="input-group mb-3 w-50">
+                <span class="input-group-text" id="basic-addon1">Tên Sách</span>
+                <input type="text" class="form-control" placeholder="tên sách" name="BookName">
+            </div>
+            <div class="input-group mb-3 w-50">
+                <span class="input-group-text" id="basic-addon1">Tên Sách</span>
+                <select class="form-select form-select-sm" name="category">
+                    <option selected>Open this select menu</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                  </select>
+            </div>
+            
+            <div class="input-group mb-3 w-50">
+                <span class="input-group-text" id="basic-addon1">Mô Tả</span>
+                <input type="text" class="form-control" placeholder="mô tả" name="Description">
+            </div>
+            <div class="input-group mb-3 w-50">
+                <span class="input-group-text" id="basic-addon1">Link ảnh</span>
+                <input type="text" class="form-control" placeholder="link ảnh" name="ImagePath">
+            </div>
+            <div class="input-group mb-3" style="min-height: 25rem;">
+                <span class="input-group-text" id="basic-addon1">Nội dung</span>
+                <textarea class="form-control" name="Content"></textarea>    
+            </div>
+            
+        </div>
+
+    </section>
+
+    <footer class="p-5 mt-5 bg-dark text-light">
+        <h5 class="display-6 fs-1">© 2021 Tủ Sách - Ma Thi Huyen</h5>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
