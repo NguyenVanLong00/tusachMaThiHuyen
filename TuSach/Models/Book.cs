@@ -5,6 +5,8 @@ namespace TuSach.Models
     public class Book
     {
         [ScaffoldColumn(false)]
+
+
         public int BookID { get; set; }
 
         [Required, StringLength(100), Display(Name = "Name")]

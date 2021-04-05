@@ -40,8 +40,8 @@
 
         <header>
         <div class="login container d-flex justify-content-end">
-            <a href="./login.html" class=" btn btn-sm btn-outline-primary m-2">Đăng Nhập</a>
-            <a href="./register.html" class=" btn btn-sm btn-outline-primary m-2">Đăng Ký</a>
+            <a href="./Login.aspx" class=" btn btn-sm btn-outline-primary m-2">Đăng Nhập</a>
+            <a href="./DangKi.aspx" class=" btn btn-sm btn-outline-primary m-2">Đăng Ký</a>
         </div>
         <nav class="navbar navbar-expand-lg navbar-light bg-light ">
             <div class="container">
@@ -86,8 +86,12 @@
         </nav>
     </header>
         <div class="container body-content">
+           
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
-            </asp:ContentPlaceHolder>
+           
+               </asp:ContentPlaceHolder>
+        
+        
         </div>
     </form>
     

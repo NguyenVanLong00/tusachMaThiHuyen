@@ -21,7 +21,7 @@
                         <div class="carousel-item">
                                 <img src="https://sttruyen.com/res/file/757123979af1e0f53d71025b2c1c9eff_PC.png"
                                         class="d-block w-100" alt="...">
-                        </div>
+                        </div>  
                         <div class="carousel-item">
                                 <img src="https://sttruyen.com/res/file/98acb298da97ac22ba62e4a9be7fecb8_Baner%20web.png"
                                         class="d-block w-100" alt="...">

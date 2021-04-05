@@ -7,7 +7,7 @@
     <section class="container px-md-5">
       <%#: BookItem.Content%>
     </section>
-
+            
 
 
 

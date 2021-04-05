@@ -30,6 +30,7 @@ namespace TuSach
 
 
             var _db = new Models.BookContext();
+           
             var newBook = new Models.Book
             {
                 BookName = name,
