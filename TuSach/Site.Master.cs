@@ -44,14 +44,14 @@ namespace TuSach
             IQueryable<Models.Category> query = _db.Categories;
             return query;
         }
-        public void DangXuat()
+        public string DangXuat()
         {
 
-            Response.Cookies.Set(new HttpCookie("taikhoan", ""));
-            Response.Cookies.Set(new HttpCookie("matkhau", ""));
+            
             DangKy = "Đăng Ký";
             DangNhap = "Đăng Nhập";
             LinkDK = "./DangKi.aspx";
+            return "";
         }
 
        
