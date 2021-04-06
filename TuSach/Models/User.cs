@@ -12,8 +12,6 @@ namespace TuSach.Models
 
        [Required, StringLength(15)]
        public string Password { get; set; }
-
-       
        
 
     }

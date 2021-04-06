@@ -227,6 +227,7 @@ E:\tusachMaThiHuyen\TuSach\bin\Newtonsoft.Json.xml
 E:\tusachMaThiHuyen\TuSach\bin\Antlr3.Runtime.pdb
 E:\tusachMaThiHuyen\TuSach\bin\Microsoft.AspNet.FriendlyUrls.xml
 E:\tusachMaThiHuyen\TuSach\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\tusachMaThiHuyen\TuSach\obj\Debug\TuSach.csprojAssemblyReference.cache
 E:\tusachMaThiHuyen\TuSach\obj\Debug\TuSach.csproj.CoreCompileInputs.cache
 E:\tusachMaThiHuyen\TuSach\obj\Debug\TuSach.csproj.CopyComplete
 E:\tusachMaThiHuyen\TuSach\obj\Debug\TuSach.dll
