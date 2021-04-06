@@ -14,7 +14,6 @@ namespace TuSach
         protected void Page_Load(object sender, EventArgs e)
         {
             
-
         }
 
         public IQueryable<Models.Category> GetCategories()

@@ -153,3 +153,4 @@ D:\tusachMaThiHuyen\TuSach\obj\Debug\TuSach.csproj.CoreCompileInputs.cache
 D:\tusachMaThiHuyen\TuSach\obj\Debug\TuSach.csproj.CopyComplete
 D:\tusachMaThiHuyen\TuSach\obj\Debug\TuSach.dll
 D:\tusachMaThiHuyen\TuSach\obj\Debug\TuSach.pdb
+E:\tusach\TuSach\obj\Debug\TuSach.csprojAssemblyReference.cache

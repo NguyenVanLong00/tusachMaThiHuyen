@@ -12,19 +12,42 @@ namespace TuSach
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-/*
-            if (Request.QueryString["id"] != null)
-                BookID = Int32.Parse(Request.QueryString.Get("id"));
-            else
-                BookID = 1;
 
-            var _db = new TuSach.Models.BookContext();
-            IQueryable<Models.Book>  query = _db.Books;
-            query = query.Where(p => p.BookID == BookID);
-            BookItem  =  query.FirstOrDefault();*/
-            
+            if (Request.QueryString.Get("id") == null)
+                Response.Redirect("Category.aspx");
+
+            int BookID = Int32.Parse(Request.QueryString.Get("id"));
+            if (isExisBook(BookID)) {
+                var _db = new TuSach.Models.BookContext();
+                IQueryable<Models.Book> query = _db.Books;
+                query = query.Where(p => p.BookID == BookID);
+                BookItem = query.FirstOrDefault();
+            }
+            else
+            {
+                Response.Redirect("Category.aspx");
+            }
 
         }
         public Models.Book BookItem { get; set; }
+
+        public bool isExisBook(int id)
+        {
+            var _db = new Models.BookContext();
+
+            IQueryable<Models.Book> query = _db.Books;
+
+            int tontai = query.Where(u => u.BookID == id).Count();
+            if (tontai != 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
+
+    
 }

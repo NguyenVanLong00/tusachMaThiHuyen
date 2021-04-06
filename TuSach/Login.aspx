@@ -13,8 +13,11 @@
                 <input type="password" class="form-control" id="exampleInputPassword1" name="matkhau">
             </div>
 
-     
+
             <asp:Button class="btn btn-primary mb-3"  ID="SubmitUser" runat="server" Text="Đăng Nhập" OnClick="Submit_Login" />
+            
+            <p class="my-3 text-primary"><%= message %></p>
+
         </div>
     </div>
 

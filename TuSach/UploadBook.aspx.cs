@@ -11,7 +11,15 @@ namespace TuSach
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            HttpCookie taikhoan = Request.Cookies.Get("taikhoan");
+            HttpCookie matkhau = Request.Cookies.Get("matkhau");
+            
+            if (taikhoan == null || matkhau == null) {
+                Response.Redirect("Default.aspx");
+            }
+            if (!CheckUser(taikhoan.Value, matkhau.Value)) {
+                Response.Redirect("Default.aspx");
+            }
         }
 
         public IQueryable<Models.Category> GetCategories()
@@ -43,6 +51,23 @@ namespace TuSach
 
             _db.Books.Add(newBook);
             _db.SaveChanges();
+        }
+        public bool CheckUser(string name, string password)
+        {
+            var _db = new Models.BookContext();
+
+
+            IQueryable<Models.User> query = _db.Users;
+
+            int tontai = query.Where(u => u.UserName == name && u.Password == password).Count();
+            if (tontai == 1)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 }

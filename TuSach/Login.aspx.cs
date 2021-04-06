@@ -11,25 +11,21 @@ namespace TuSach
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+          
         }
-
+        public string message="xin moi dang nhap";
+        
         public bool CheckUser(string name, string password)
         {
             var _db = new Models.BookContext();
 
-
             IQueryable<Models.User> query = _db.Users;
 
             int tontai = query.Where(u => u.UserName == name && u.Password == password).Count();
-            if (tontai == 1)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+
+            return tontai == 0 ? false : true;
+            
+            
         }
 
         public void Submit_Login(object sender, EventArgs e)
@@ -37,17 +33,16 @@ namespace TuSach
             string name = Request.Form.Get("taikhoan");
             string matkhau = Request.Form.Get("matkhau");
 
-
             if (CheckUser(name, matkhau))
             {
+                Response.Cookies.Add(new HttpCookie("taikhoan", name));
+                Response.Cookies.Add(new HttpCookie("matkhau", matkhau));
                 Response.Redirect("Default.aspx");
             }
             else
             {
-                Response.Write("Ban da nhap sai");
+                message = "tai khoan hoac mat khau khong dung";
             }
-
-
         }
     }
 }

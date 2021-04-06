@@ -14,8 +14,11 @@
                 <label for="exampleInputPassword2" class="form-label">Nhập Lại Mật Khẩu</label>
                 <input name="testmatkhau" type="password" class="form-control" id="exampleInputPassword2">
             </div>
-                
+           
+
             <asp:Button class="btn btn-primary msb-3"  ID="SubmitUser" runat="server" Text="Đăng Kí" OnClick="Submit_DangKi" />
+
+                 <p class="my-3 text-primary"><%= message %></p>
         </div>
     </div>
 

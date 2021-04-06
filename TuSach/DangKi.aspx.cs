@@ -11,9 +11,9 @@ namespace TuSach
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
         }
 
+        public string message;
         public bool CheckUser(string name)
         {
             var _db = new Models.BookContext();
@@ -22,7 +22,7 @@ namespace TuSach
             IQueryable<Models.User> query = _db.Users;
 
             int tontai = query.Where(u => u.UserName == name ).Count();
-            if (tontai != 0)
+            if (tontai == 0)
             {
                 return true;
             }
@@ -43,7 +43,7 @@ namespace TuSach
 
             if (matkhau == testmatkhau)
             {
-                if (CheckUser(name))
+                if (CheckUser(name)) 
                 {
 
                     var _db = new Models.BookContext();
@@ -57,18 +57,21 @@ namespace TuSach
 
                     _db.Users.Add(newUser);
                     _db.SaveChanges();
+
+                    Response.Cookies.Add(new HttpCookie("taikhoan", name));
+                    Response.Cookies.Add(new HttpCookie("matkhau", matkhau));
+                    Response.Redirect("Default.aspx");
                 }
                 else {
-                    Response.Write("tai khoan da ton tai");
+                     message = "tai khoan da ton tai";
                 }
 
             }
             else
             {
-                Response.Write("nhap mat khau khong giong nhau");
-            }
-
-            
+                message = "mat khau khong giong nhau";
+            }  
         }
+
     }
 }
