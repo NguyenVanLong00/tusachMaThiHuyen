@@ -77,7 +77,10 @@
                             <a class="nav-link " href="UploadBook">Đăng Truyện</a>
                         </li>
                     </ul>
-                  
+                    <div class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-dark" type="submit">Search</button>
+                    </div>
                 </div>
             </div>
         </nav>
@@ -100,7 +103,7 @@
         function DangXuat() {
             document.cookie = "taikhoan=00";
             document.cookie = "matkhau=00";
-            <%= DangXuat()%>;
+            <%= DangXuat()%>
 
         }
     </script>

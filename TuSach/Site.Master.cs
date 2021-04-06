@@ -47,11 +47,12 @@ namespace TuSach
         public string DangXuat()
         {
 
-            
+            Response.Cookies.Set(new HttpCookie("taikhoan", ""));
+            Response.Cookies.Set(new HttpCookie("matkhau", ""));
             DangKy = "Đăng Ký";
             DangNhap = "Đăng Nhập";
             LinkDK = "./DangKi.aspx";
-            return "";
+            return "1";
         }
 
        
