@@ -61,10 +61,14 @@
 
                             <ItemTemplate>
                                 <div class="card col-5 col-md-4 col-lg-2 p-0 mx-1 mx-md-3 ">
-                                     <img src=" <%#: Item.ImagePath %>"
+                                    <a href="Book.aspx?id=<%#: Item.BookID %>" >
+                                        
+                                        <img src=" <%#:    Item.ImagePath %>"
                                      class="card-img-top img-fluid" >
                                      <div class="card-body">
                                        <p class="h5"> <%#: Item.BookName %></p>
+                                    </a>
+                                     
                                      </div>
                                 </div>
                             </ItemTemplate>

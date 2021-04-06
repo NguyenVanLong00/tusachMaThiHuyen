@@ -12,6 +12,24 @@ namespace TuSach
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            HttpCookie checkTK = Request.Cookies.Get("taikhoan");
+            HttpCookie checkMK = Request.Cookies.Get("matkhau");
+            if( CheckUser(checkTK.Value, checkMK.Value))
+            {
+
+            }
+
+        }
+        public bool CheckUser(string name, string password)
+        {
+            var _db = new Models.BookContext();
+
+            IQueryable<Models.User> query = _db.Users;
+
+            int tontai = query.Where(u => u.UserName == name && u.Password == password).Count();
+
+            return tontai == 0 ? false : true;
+
 
         }
         public IQueryable<Models.Book> GetBooks()

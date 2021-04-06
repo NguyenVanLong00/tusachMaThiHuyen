@@ -13,6 +13,7 @@ namespace TuSach
         {
           
         }
+        
         public string message="xin moi dang nhap";
         
         public bool CheckUser(string name, string password)
@@ -38,6 +39,7 @@ namespace TuSach
                 Response.Cookies.Add(new HttpCookie("taikhoan", name));
                 Response.Cookies.Add(new HttpCookie("matkhau", matkhau));
                 Response.Redirect("Default.aspx");
+
             }
             else
             {
