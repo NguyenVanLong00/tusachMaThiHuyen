@@ -22,7 +22,7 @@ namespace TuSach
             IQueryable<Models.User> query = _db.Users;
 
             int tontai = query.Where(u => u.UserName == name && u.Password == password).Count();
-            if (tontai != 0)
+            if (tontai == 1)
             {
                 return true;
             }

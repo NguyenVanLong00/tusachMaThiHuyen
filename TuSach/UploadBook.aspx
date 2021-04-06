@@ -3,9 +3,12 @@
 
     <section class="container">
         <p class="display-5 mt-5">Đăng Tải Sách</p>
-        <div>
-            <asp:Button class="btn btn-primary mb-3"  ID="SubmitBook" runat="server" Text="Tải Sách Lên" OnClick="Submit_Book" />
-            <div class="input-group mb-3 w-50">
+        
+        <asp:Button class="btn btn-primary mb-3"  ID="SubmitBook" runat="server" Text="Tải Sách Lên" OnClick="Submit_Book" />
+            
+        
+        
+        <div class="input-group mb-3 w-50">
                 <span class="input-group-text">Tên Sách</span>
                 <input type="text"  class="form-control" placeholder="tên sách" name="BookName">
             </div>
@@ -36,7 +39,7 @@
                 <span class="input-group-text" >Nội dung</span>
                 <textarea class="form-control" name="Content"></textarea>    
             </div>
-        </div>
+        
     </section>
 
 </asp:Content>

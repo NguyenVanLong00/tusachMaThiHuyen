@@ -12,7 +12,6 @@ namespace TuSach
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            int id = req
 /*
             if (Request.QueryString["id"] != null)
                 BookID = Int32.Parse(Request.QueryString.Get("id"));
@@ -24,7 +23,6 @@ namespace TuSach
             query = query.Where(p => p.BookID == BookID);
             BookItem  =  query.FirstOrDefault();*/
             
-            Response.Write(BookItem);
 
         }
         public Models.Book BookItem { get; set; }

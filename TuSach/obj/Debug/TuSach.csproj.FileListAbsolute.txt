@@ -75,7 +75,6 @@ E:\tusach\TuSach\obj\Debug\TuSach.csproj.CoreCompileInputs.cache
 E:\tusach\TuSach\obj\Debug\TuSach.csproj.CopyComplete
 E:\tusach\TuSach\obj\Debug\TuSach.dll
 E:\tusach\TuSach\obj\Debug\TuSach.pdb
-E:\tusach\TuSach\obj\Debug\TuSach.csprojAssemblyReference.cache
 D:\tusachMaThiHuyen\TuSach\bin\TuSach.dll.config
 D:\tusachMaThiHuyen\TuSach\bin\TuSach.dll
 D:\tusachMaThiHuyen\TuSach\bin\TuSach.pdb

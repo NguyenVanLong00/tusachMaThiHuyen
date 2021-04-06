@@ -13,6 +13,24 @@ namespace TuSach
         {
 
         }
+
+        public bool CheckUser(string name)
+        {
+            var _db = new Models.BookContext();
+
+
+            IQueryable<Models.User> query = _db.Users;
+
+            int tontai = query.Where(u => u.UserName == name ).Count();
+            if (tontai != 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
         public void Submit_DangKi(object sender, EventArgs e)
         {
             string name = Request.Form.Get("taikhoan");
@@ -25,17 +43,25 @@ namespace TuSach
 
             if (matkhau == testmatkhau)
             {
-                var _db = new Models.BookContext();
-
-                var newUser = new Models.User
+                if (CheckUser(name))
                 {
-                    UserName = name,
-                    Password = matkhau
-                };
+
+                    var _db = new Models.BookContext();
+
+                    var newUser = new Models.User
+                    {
+                        UserName = name,
+                        Password = matkhau
+                    };
 
 
-                _db.Users.Add(newUser);
-                _db.SaveChanges();
+                    _db.Users.Add(newUser);
+                    _db.SaveChanges();
+                }
+                else {
+                    Response.Write("tai khoan da ton tai");
+                }
+
             }
             else
             {
